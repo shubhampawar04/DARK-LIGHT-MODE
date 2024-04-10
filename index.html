@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Light Them</title>
+    <style>
+       .img-mode{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        display: block;
+        margin: 20px auto;
+       }
+       .active{
+        border: 2px solid red;
+       }
+
+       .bg-dark{
+        background-color: #000;
+        color: #fff;
+       }
+
+       .bg-light{
+        background-color: #fff;
+        color: #000;
+       }
+       .ram{
+        height: 150px;
+        width: 150px;
+        background-color:white ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        padding: 20px;
+        border: 5px solid black;
+       }
+
+       .txt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        margin: 20px auto;
+        padding: 20px;
+       }
+    </style>
+</head>
+<body id="body">
+    <img src="./light-mode.png" class="img-mode active" onclick="lightMode()" id="dark" />
+
+    <img src="./dark-mode.png" class="img-mode " onclick="darkMode()" id="light" />
+    <br/> <br/>
+
+ <img src="https://mir-s3-cdn-cf.behance.net/projects/404/c55075145085091.6297c2a9a913b.jpg" class="ram"/>
+
+<p class="txt"><b>"राम ज्यांचे नाव आहे,
+    अयोध्या ज्यांचे गाव आहे..
+    असा हा रघुनंदन आम्हास
+    सदैव वंदनीय आहे.
+    श्रीराम नवमीच्या हार्दिक शुभेच्छा..! "
+    
+    "दशरथ नंदन राम
+    दया सागर राम
+    सत्यधर्म पारायण राम
+    राम नवमीच्या मंगलमय शुभेच्छा..!
+    *🙏🚩۝༒ॐ..जय श्री राम..ॐ༒۝🙏🚩</b></p>
+
+<script>
+    function lightMode ()
+    {
+        const lightMode = document.getElementById('light');
+        lightMode.classList.add('active');
+
+        const darkMode = document.getElementById('dark');
+        darkMode.classList.remove('active');
+        const body = document.getElementById('body');
+        body.className = "bg-light"
+    }
+
+    function darkMode() {
+        const darkMode = document.getElementById('dark');
+        darkMode.classList.add('active');
+
+        const lightMode = document.getElementById('light');
+        lightMode.classList.remove('active');
+        const body = document.getElementById('body');
+        body.className = "bg-dark"
+    }
+</script>
+</body>
+</html>
